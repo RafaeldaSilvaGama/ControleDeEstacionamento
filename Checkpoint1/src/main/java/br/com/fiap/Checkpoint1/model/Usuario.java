@@ -29,8 +29,6 @@ public class Usuario implements Serializable {
     @CPF
     private String cpf;
 
-
-
     @OneToMany(mappedBy = "usuarioApartamento", cascade = CascadeType.ALL)
     private List<Apartamento> apartamentos;
     public List<Apartamento> getApartamentos() {

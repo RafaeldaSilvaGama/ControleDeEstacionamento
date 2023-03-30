@@ -23,11 +23,11 @@ public class Vaga implements Serializable {
     private String andarGaragem;
 
     @OneToOne(cascade={CascadeType.DETACH})
-    @JoinColumn(name = "apartamento_id")
+    @JoinColumn(name = "apartamento_id", nullable = false)
     private Apartamento apartamento;
 
     @OneToOne(cascade={CascadeType.DETACH})
-    @JoinColumn(name = "carro_id")
+    @JoinColumn(name = "carro_id", nullable = false)
     private Carro carro;
 
 

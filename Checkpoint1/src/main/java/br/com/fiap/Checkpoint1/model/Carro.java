@@ -30,11 +30,11 @@ public class Carro implements Serializable {
     private String ano;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "usuario_id")
+    @JoinColumn(name = "usuario_id", nullable = false)
     private Usuario usuarioCarro;
 
     @OneToOne(cascade={CascadeType.DETACH})
-    @JoinColumn(name = "vaga_id")
+    @JoinColumn(name = "vaga_id", nullable = false)
     private Vaga vaga;
 
 
